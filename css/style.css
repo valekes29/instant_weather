@@ -1,0 +1,242 @@
+:root {
+  --color-primary: #f5fcfc;
+  --color-secondary: #0f3359;
+  --color-font: #ffffff;
+  --color-shadow: #0e061c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  max-width: 1280px;
+  background-color: var(--color-primary);
+  font-size: 1.25rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#currentDate {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+#infoForm {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#postalCodeForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#postalCodeForm input,
+#postalCodeForm button {
+  width: 80%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#citySelect {
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+}
+
+#weatherFormContainer {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#days {
+  width: 100%;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-item {
+  margin-bottom: 10px;
+}
+
+.checkbox-item input {
+  margin-right: 10px;
+}
+
+#showForecast {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--color-secondary);
+  color: var(--color-font);
+  border: 2px solid var(--color-primary);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showForecast:hover {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.weather-display {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#weatherCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.weather-card {
+  text-align: center;
+  min-height: 60px;
+  margin: 10px 5px;
+  padding: 5px;
+  background-color: var(--color-secondary);
+  color: var(--color-font);
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+  width: 100%;
+}
+
+#refreshButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--color-secondary);
+  color: var(--color-font);
+  border: 2px solid var(--color-primary);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#refreshButton:hover {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  --color-primary: #121212;
+  --color-secondary: #bb86fc;
+  --color-font: #ffffff;
+}
+
+body.dark-mode .container {
+  background-color: var(--color-primary);
+  color: var(--color-font);
+}
+
+body.dark-mode #infoForm {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
+}
+
+body.dark-mode .weather-display {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
+}
+
+body.dark-mode .weather-card {
+  background-color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  #weatherCards {
+    flex-direction: column;
+  }
+
+  .weather-card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #infoForm {
+    width: 95%;
+    margin: 8px auto;
+  }
+}
+
+#darkModeToggle {
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: var(--color-secondary);
+  color: var(--color-font);
+  border: 2px solid var(--color-primary);
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+}
+
+#darkModeToggle:hover {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.text-blanc {
+    color: white;
+}
+
+.text-noir {
+    color: black;
+}
